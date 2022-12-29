@@ -10,7 +10,7 @@ while True:
         file = input("Which file do you want to treat?")
         query = input("What do you want to do next?[signature(s)/encrypt(en)/import(im)/decrypt(d)/revoke(r)/upload(u)/show pub key(sp)/fingerprint(f)/search key on the server(sk)/refresh the key(rk)")
         if query == "en":
-            comm1 = "gpg --encrypt --sign --armor -r " + email
+            comm1 = "gpg --encrypt --sign --armor -r " + email + " " + file
             os.system(comm1)
         elif query == 's':
             comm2 = "gpg --sign-key " + email + " " + file
